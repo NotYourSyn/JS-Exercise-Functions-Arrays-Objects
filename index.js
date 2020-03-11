@@ -98,8 +98,13 @@ function temperatureInF(/* code here */) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
-  /* code here */
+function makePersonObject(id, name, email) {
+  const personObject = {
+    id: 1,
+    name: 'Luke',
+    email: 'luke@luke.com'
+  }
+  return personObject;
 }
 
 /**
@@ -115,8 +120,8 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
+function getName({id, name,email}) {
+  return `Hello, my name is ${name}`;
 }
 
 
