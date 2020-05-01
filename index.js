@@ -12,8 +12,8 @@
  *
  * NOTE: This example has been completed for you.
 */
-function addNumbers(num1, num2) {
-  return num1 + num2;
+function addNumbers(x, y) {
+  return x + y;
 }
 
 // ⭐️ Example Challenge end ⭐️
@@ -54,8 +54,7 @@ function sayGoodbye(Andy) {
  * Hint 2: There is a very easy way to round numbers in JS. Do a google search to find out how. 
 */
 function temperatureCtoF(celsius) {
-  var fahrenheit;
-  fahrenheit = Math.round(celsius*(9/5)) + 32;
+  let fahrenheit = Math.round(celsius*(9/5)) + 32;
 
   return fahrenheit;
 }
@@ -77,7 +76,7 @@ function temperatureCtoF(celsius) {
  * 
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
-function temperatureInF(temp, unit) {
+ function temperatureInF(temp, unit)  {
   if(unit ==='C' || unit ==='C') {
     return temperatureCtoF(temp) + 'F';
   }
@@ -283,8 +282,8 @@ function getModelYears(inventory) {
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoById(/* code here */) {
-  /* code here */
+function getCarInfoById(inventory,id) {
+  return `This is a ${inventory[id-1].car_make} ${inventory[id-1].car_model}`;
 }
 
 /**
