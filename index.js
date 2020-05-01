@@ -121,7 +121,7 @@ function makePersonObject(id,name,email) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName({id, name,email}) {
+function getName({name}) {
   return `Hello, my name is ${name}`;
 }
 
@@ -324,7 +324,8 @@ function getOlderCars(inventory,maxYear) {
 */
 function getGermanCars(inventory) {
    let germanCars = [];
-   for(i=0; i <inventory.length-1; i++){
+   // @ts-ignore
+   for(i=0; i<inventory.length; i++){
      if(inventory[i].car_make ==='Audi' || inventory[i].car_make === 'Mercedes-Benz' || inventory[i].car_make ==='Volkswagen' || inventory[i].car_make === 'BMW'){
        germanCars.push(inventory[i]);
      }
