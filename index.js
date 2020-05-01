@@ -35,10 +35,9 @@ function addNumbers(x, y) {
  * the returned value should look like: 'Goodbye, Andy. Have a great day.'
  * 
 */
-function sayGoodbye(Andy) {
-  return 'Goodbye, ' +  Andy + '. ' + 'Have a great day.'
+function sayGoodbye(name) {
+  return `Goodbye, ${name}. Have a great day.`
 }
-
 /**
  * ### Challenge `temperatureCtoF`
  * 
@@ -300,8 +299,14 @@ function getCarInfoById(inventory,id) {
  * with a `car_year` which is at most the given desired max year,
  * in the same order as they appear in the original inventory.
 */
-function getOlderCars(/* code here */) {
-  /* code here */
+function getOlderCars(inventory,maxYear) {
+  let desiredYears = [];
+  for(i=0; i < inventory.length; i++){
+    if(inventory[i].car_year <= maxYear){
+      desiredYears.push(inventory[i]);
+    }
+  }
+  return desiredYears;
 }
 
 /**
@@ -317,8 +322,14 @@ function getOlderCars(/* code here */) {
  * made by either `Audi` or `Mercedes-Benz` or `Volkswagen` or `BMW`,
  * in the same order as they appear in the original inventory.
 */
-function getGermanCars(/* code here */) {
-  /* code here */
+function getGermanCars(inventory) {
+   let germanCars = [];
+   for(i=0; i <inventory.length-1; i++){
+     if(inventory[i].car_make ==='Audi' || inventory[i].car_make === 'Mercedes-Benz' || inventory[i].car_make ==='Volkswagen' || inventory[i].car_make === 'BMW'){
+       germanCars.push(inventory[i]);
+     }
+   }
+   return germanCars;
 }
 
 /**
